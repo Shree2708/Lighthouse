@@ -1,0 +1,10 @@
+sh 'npm install'
+sh 'npm run lighthouse'
+publishHTML (target: [
+  allowMissing: false,
+  alwaysLinkToLastBuild: false,
+  keepAll: true,
+  reportDir: '.',
+  reportFiles: 'lighthouse-report.html',
+  reportName: "Lighthouse"
+])
